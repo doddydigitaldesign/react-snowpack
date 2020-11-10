@@ -6,9 +6,9 @@ import {
   IconButton,
   Toolbar,
   Typography
-} from "../web_modules/@material-ui/core.js";
-import {Menu} from "../web_modules/@material-ui/icons.js";
-import React, {useContext, useEffect, useState} from "../web_modules/react.js";
+} from "./web_modules/@material-ui/core.js";
+import {Menu} from "./web_modules/@material-ui/icons.js";
+import React, {useContext, useEffect, useState} from "./web_modules/react.js";
 import {ShareButton} from "./components/shareButton/index.js";
 import {ThemeContext} from "./theme/index.js";
 function App({}) {

@@ -1,11 +1,11 @@
 import {
   createMuiTheme,
   ThemeProvider as MUIThemeProvider
-} from "../../web_modules/@material-ui/core.js";
-import amber2 from "../../web_modules/@material-ui/core/colors/amber.js";
-import blue2 from "../../web_modules/@material-ui/core/colors/blue.js";
-import grey2 from "../../web_modules/@material-ui/core/colors/grey.js";
-import React, {useState} from "../../web_modules/react.js";
+} from "../web_modules/@material-ui/core.js";
+import amber2 from "../web_modules/@material-ui/core/colors/amber.js";
+import blue2 from "../web_modules/@material-ui/core/colors/blue.js";
+import grey2 from "../web_modules/@material-ui/core/colors/grey.js";
+import React, {useState} from "../web_modules/react.js";
 const defaultTheme = createMuiTheme({
   palette: {
     secondary: {

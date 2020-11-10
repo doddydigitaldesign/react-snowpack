@@ -1,6 +1,6 @@
-import {IconButton} from "../../../web_modules/@material-ui/core.js";
-import {Share} from "../../../web_modules/@material-ui/icons.js";
-import React, {useState} from "../../../web_modules/react.js";
+import {IconButton} from "../../web_modules/@material-ui/core.js";
+import {Share} from "../../web_modules/@material-ui/icons.js";
+import React, {useState} from "../../web_modules/react.js";
 import {useShareButtonStyles} from "./styles.js";
 export const ShareButton = () => {
   const classes = useShareButtonStyles();
