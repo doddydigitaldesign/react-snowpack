@@ -5,7 +5,7 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build --clean",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && node ./config/copyNoJekyll.js",
     "deploy": "gh-pages -d build",
     "test": "web-test-runner \"src/**/*.test.tsx\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
