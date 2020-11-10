@@ -11,10 +11,12 @@ export const ShareButton = () => {
     onClick: (e) => {
       setSuccess(true);
       if ("share" in navigator) {
-        navigator.share({url: location.host + location.pathname});
+        navigator.share({
+          url: "https://doddydigitaldesign.github.io/react-snowpack"
+        });
         return;
       }
-      navigator.clipboard.writeText(location.host + location.pathname);
+      navigator.clipboard.writeText("https://doddydigitaldesign.github.io/react-snowpack");
     }
   }, /* @__PURE__ */ React.createElement(Share, null));
 };
