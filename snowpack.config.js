@@ -1,8 +1,9 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
+
 module.exports = {
   mount: {
     public: '/',
-    src: '/_dist_',
+    src: '/',
   },
   plugins: [
     '@snowpack/plugin-react-refresh',
@@ -20,6 +21,7 @@ module.exports = {
   },
   buildOptions: {
     /* ... */
+    baseUrl: require('./package.json').homepage,
   },
   proxy: {
     /* ... */

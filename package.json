@@ -4,7 +4,7 @@
   "homepage": "https://doddydigitaldesign.github.io/react-snowpack/",
   "scripts": {
     "start": "snowpack dev",
-    "build": "snowpack build",
+    "build": "snowpack build --clean",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "web-test-runner \"src/**/*.test.tsx\"",
