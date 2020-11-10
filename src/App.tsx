@@ -7,10 +7,9 @@ import {
   Toolbar,
   Typography,
 } from '@material-ui/core';
-import blue from '@material-ui/core/colors/blue';
-import orange from '@material-ui/core/colors/orange';
 import { Menu } from '@material-ui/icons';
 import React, { useContext, useEffect, useState } from 'react';
+import { ShareButton } from './components/shareButton';
 import { ThemeContext } from './theme/index';
 
 interface AppProps {}
@@ -25,34 +24,10 @@ function App({}: AppProps) {
     const timer = setTimeout(() => setCount(count + 1), 1000);
 
     return () => clearTimeout(timer);
-  }, [count, setCount, themeContext]);
+  }, [count, setCount]);
   // Return the App component.
 
-  useEffect(() => {
-    if (themeContext?.setTheme) {
-      themeContext.setTheme({
-        palette: {
-          ...themeContext.currentTheme,
-          primary:
-            count % 3 === 0
-              ? {
-                  ...orange,
-                  contrastText: '#FFFFFF',
-                  dark: orange['900'],
-                  light: orange['400'],
-                  main: orange['600'],
-                }
-              : {
-                  ...blue,
-                  contrastText: '#FFFFFF',
-                  dark: blue['900'],
-                  light: blue['400'],
-                  main: blue['600'],
-                },
-        },
-      });
-    }
-  }, [count]);
+  useEffect(() => {}, [count]);
   return (
     <Container>
       <AppBar>
@@ -63,11 +38,12 @@ function App({}: AppProps) {
             </Icon>
           </IconButton>
           <Typography variant={'body1'}>DDD React Snowpack</Typography>
+          <ShareButton />
         </Toolbar>
       </AppBar>
       <Toolbar />
       <Grid container>
-        <Grid item>
+        <Grid item xs={12}>
           <Typography variant={'h3'}>
             {'The app has been open for ' + count + ' seconds'}
           </Typography>
