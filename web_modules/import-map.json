@@ -1,0 +1,11 @@
+{
+  "imports": {
+    "@material-ui/core": "./@material-ui/core.js",
+    "@material-ui/core/colors/amber": "./@material-ui/core/colors/amber.js",
+    "@material-ui/core/colors/blue": "./@material-ui/core/colors/blue.js",
+    "@material-ui/core/colors/grey": "./@material-ui/core/colors/grey.js",
+    "@material-ui/icons": "./@material-ui/icons.js",
+    "react": "./react.js",
+    "react-dom": "./react-dom.js"
+  }
+}
