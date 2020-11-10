@@ -11,7 +11,9 @@
     <div id="root"></div>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <script type="module">
-      import './react-snowpack/_dist_/index.js';
+      if (window && window.location) {
+        import("./_dist_/index.js");
+      }
     </script>
     <script type="module" src="/react-snowpack/_dist_/index.js"></script>
   </body>
