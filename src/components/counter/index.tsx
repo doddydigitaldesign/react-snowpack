@@ -1,9 +1,7 @@
-import { Typography } from '@material-ui/core';
+import { Typography, TypographyProps } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 
-interface Props {}
-
-export const Counter = (props: Props) => {
+export const Counter = (props: Omit<TypographyProps, 'children'>) => {
   // Create the count state.
   const [count, setCount] = useState(0);
   // Create the counter (+1 every second).
@@ -14,8 +12,8 @@ export const Counter = (props: Props) => {
   }, [count, setCount]);
   // Return the App component.
   return (
-    <Typography variant={'h3'}>
-      {'The app has been open for ' + count + ' seconds'}
+    <Typography component={'time'} {...props}>
+      {count}
     </Typography>
   );
 };
