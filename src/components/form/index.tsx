@@ -10,16 +10,22 @@ interface Props
   gridContainer?: Omit<GridProps<typeof Paper>, 'container' | 'item'>;
 }
 
-export const Form: React.FC<Props> = ({ gridContainer, ...restProps }) => {
+export const Form: React.FC<Props> = ({
+  gridContainer,
+  children,
+  ...restProps
+}) => {
   const classes = useFormStyles();
   return (
-    <Grid
-      container
-      component={Paper}
-      className={classes.internalSpacing}
-      {...gridContainer}
-    >
-      <form {...restProps} />
-    </Grid>
+    <form {...restProps}>
+      <Grid
+        container
+        component={Paper}
+        className={classes.internalSpacing}
+        {...gridContainer}
+      >
+        {children}
+      </Grid>
+    </form>
   );
 };
